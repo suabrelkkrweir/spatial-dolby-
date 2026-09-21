@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
     rollupOptions: {
-      input: resolve(__dirname, 'index.html'),
+      input: resolve(import.meta.dirname, 'index.html'),
     },
   },
 })
