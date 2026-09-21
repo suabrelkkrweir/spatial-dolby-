@@ -48,8 +48,10 @@
       "electron.js",
       "package.json"
     ],
+    "extraFiles": [
+      "electron.js"
+    ],
     "win": {
       "target": ["nsis"]
     }
   }
-}
