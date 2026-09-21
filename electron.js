@@ -1,6 +1,7 @@
 import { app, BrowserWindow } from 'electron';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import fs from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,8 +16,20 @@ function createWindow() {
     },
   });
 
-  // Load the built Vite index.html file
-  win.loadFile(path.join(__dirname, 'dist', 'index.html'));
+  // Resolve built index.html path safely for both dev and production
+  const distPath = path.join(__dirname, 'dist', 'index.html');
+  const rootPath = path.join(__dirname, 'index.html');
+
+  if (fs.existsSync(distPath)) {
+    win.loadFile(distPath);
+  } else if (fs.existsSync(rootPath)) {
+    win.loadFile(rootPath);
+  } else {
+    console.error('Could not find index.html in dist or root');
+  }
+
+  // Open Developer Tools automatically to catch any remaining runtime errors
+  win.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {
