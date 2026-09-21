@@ -37,7 +37,7 @@
     "electron": "^35.0.0",
     "electron-builder": "^25.1.8"
   },
- "build": {
+  "build": {
     "appId": "com.spatial.sound.controller",
     "productName": "Spatial Sound Controller",
     "directories": {
@@ -48,10 +48,8 @@
       "electron.js",
       "package.json"
     ],
-    "extraResources": [
-      "electron.js"
-    ],
     "win": {
       "target": ["nsis"]
     }
   }
+}
