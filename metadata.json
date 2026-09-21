@@ -1,0 +1,7 @@
+{
+  "name": "Spatial Sound Controller",
+  "description": "Apple-inspired spatial audio controller for Windows with Dolby Atmos integration, 7.1.4 virtualizer, advanced acoustic acoustics, and universal driver compatibility.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
