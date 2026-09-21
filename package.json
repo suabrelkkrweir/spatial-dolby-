@@ -1,16 +1,14 @@
 {
-  "name": "spatial-sound-controller",
+  "name": "react-example",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "electron.js",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
-    "lint": "tsc --noEmit",
-    "package": "npm run build && electron-builder"
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
@@ -29,27 +27,10 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.4.21",
-    "esbuild": "^0.25.12",
+    "esbuild": "^0.25.0",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
     "typescript": "^7.0.2",
-    "@types/express": "^4.17.21",
-    "electron": "^35.0.0",
-    "electron-builder": "^25.1.8"
-  },
-  "build": {
-    "appId": "com.spatial.sound.controller",
-    "productName": "Spatial Sound Controller",
-    "directories": {
-      "output": "release"
-    },
-    "files": [
-      "dist/**/*",
-      "electron.js",
-      "package.json"
-    ],
-    "win": {
-      "target": ["nsis"]
-    }
+    "@types/express": "^4.17.21"
   }
 }
