@@ -1,5 +1,5 @@
 {
-  "name": "react-example",
+  "name": "spatial-sound-controller",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -36,5 +36,20 @@
     "@types/express": "^4.17.21",
     "electron": "^35.0.0",
     "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.spatial.sound.controller",
+    "productName": "Spatial Sound Controller",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron.js",
+      "package.json"
+    ],
+    "win": {
+      "target": ["nsis"]
+    }
   }
 }
